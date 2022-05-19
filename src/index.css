@@ -1,13 +1,84 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+    --primary: #e07a5f;
+    --secondary: #be18b1;
+    --dark : #3d405b;
+    --light: #f8f9fa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background:#f8ad9d;
+
+}
+
+.App{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgba(0,0,0,0.2);
+}
+
+.display{
+    padding: 16px;
+    text-align: right;
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.display span{
+    font-size: 14px;
+    color: #888;
+}
+
+button{
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button :hover{
+    opacity: 0,9;
+}
+
+.operators{
+    display: flex;
+}
+
+.operators button{
+    flex: 1 1 0%;
+    background-color: var(--primary);
+    font-weight: 700;
+}
+
+.digits{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digits button{
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+    background-color: var(--dark);
 }
